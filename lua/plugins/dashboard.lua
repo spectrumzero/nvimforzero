@@ -38,7 +38,7 @@ return {
           -- { action = 'Telescope persisted',                                      desc = " Search sessions", icon = " ", key = "S" },
           { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
           -- { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
-          -- { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
+          { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
         },
         footer = function()
           local stats = require("lazy").stats()

@@ -24,6 +24,15 @@ map("n", "<Leader>j", '<cmd>lua require("flash").jump()<CR>', { noremap = true, 
 --toggleterm映射
 map({ "i", "n" }, "<c-/>", "<cmd>ToggleTerm<cr>", { noremap = true })
 
+-- 快捷键复制当前缓冲区的相对路径
+map("n", "<Leader>pr", "<cmd>CpRelativePath<CR>", { noremap = true })
+
+-- 快捷键复制当前缓冲区的绝对路径
+map("n", "<Leader>pa", "<cmd>CpAbsolutePath<CR>", { noremap = true })
+
+-- 复制当前缓冲区文件的基本名称
+map("n", "<Leader>pb", "<cmd>CpFileName<CR>", { noremap = true })
+
 --在vim中一键编译运行c程序
 
 -- for hop.nvim
