@@ -71,6 +71,13 @@ require("tokyonight").setup({
   end,
 })
 
+--lualine
+require("lualine").setup({
+  options = {
+    theme = "auto",
+  },
+})
+
 --其它主题
 -- require("nordic").setup({
 --   -- Enable bold keywords.

@@ -15,6 +15,17 @@ opt.showcmd = true
 --设置conceal的级别
 opt.conceallevel = 0
 
+--禁用拼写检查
+opt.spell = false
+
+--字体
+opt.guifont = { "Hack Nerd Font Mono", "FiraCode Nerd Font Propo", "华文新魏", ":h12" }
+
+--设置光标的轮廓样式
+opt.guicursor =
+  "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
+
+-------------neovide设置
 --透明度
 vim.g.neovide_transparency = 1
 
@@ -24,11 +35,14 @@ vim.g.neovide_hide_mouse_when_typing = true
 --动画效果
 vim.g.neovide_cursor_animation_length = 0.06
 vim.g.neovide_cursor_vfx_mode = "railgun"
+vim.g.neovide_cursor_vfx_particle_speed = 30.0
+vim.g.neovide_cursor_vfx_particle_phase = 60.0
 
---禁用拼写检查
-opt.spell = false
+--打开neovide默认全屏
+vim.g.neovide_fullscreen = true
 
---
-opt.guifont = { "Hack Nerd Font Mono", "FiraCode Nerd Font Propo", "华文新魏", ":h12" }
-opt.guicursor =
-  "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
+--启用分析器
+vim.g.neovide_profiler = false
+
+--动画切换到命令行
+vim.g.neovide_cursor_animate_command_line = true
