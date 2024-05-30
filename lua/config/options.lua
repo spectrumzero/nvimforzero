@@ -18,6 +18,10 @@ opt.conceallevel = 0
 --禁用拼写检查
 opt.spell = false
 
+--启用鼠标
+--似乎需要:so一次(options.lua)
+opt.mouse = "a"
+
 --字体
 opt.guifont = { "Hack Nerd Font Mono", "FiraCode Nerd Font Propo", "华文新魏", ":h12" }
 
@@ -29,7 +33,7 @@ opt.guicursor =
 --透明度
 vim.g.neovide_transparency = 1
 
---hide the mouse when typing
+-- hide the mouse when typing
 vim.g.neovide_hide_mouse_when_typing = true
 
 --动画效果
