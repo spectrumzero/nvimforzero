@@ -31,16 +31,17 @@ opt.guicursor =
 
 -------------neovide设置
 --透明度
-vim.g.neovide_transparency = 1
+vim.g.neovide_transparency = 0.6
 
 -- hide the mouse when typing
 vim.g.neovide_hide_mouse_when_typing = true
 
 --动画效果
 vim.g.neovide_cursor_animation_length = 0.06
-vim.g.neovide_cursor_vfx_mode = "railgun"
-vim.g.neovide_cursor_vfx_particle_speed = 30.0
-vim.g.neovide_cursor_vfx_particle_phase = 60.0
+vim.g.neovide_cursor_vfx_mode = "torpedo"
+vim.g.neovide_cursor_vfx_particle_speed = 60.0
+-- 仅仅railgun适用
+vim.g.neovide_cursor_vfx_particle_phase = 1.0
 
 --打开neovide默认全屏
 vim.g.neovide_fullscreen = true

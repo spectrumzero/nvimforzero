@@ -37,7 +37,7 @@ return {
           { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
           -- { action = 'Telescope persisted',                                      desc = " Search sessions", icon = " ", key = "S" },
           { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
-          -- { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
+          { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
           { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
         },
         footer = function()

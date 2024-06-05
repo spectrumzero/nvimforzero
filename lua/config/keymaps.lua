@@ -21,10 +21,10 @@ map("n", "<Leader>j", '<cmd>lua require("flash").jump()<CR>', { noremap = true, 
 map({ "i", "n" }, "<c-/>", "<cmd>ToggleTerm<cr>", { noremap = true })
 
 -- 快捷键复制当前缓冲区的相对路径
-map("n", "<Leader>pr", "<cmd>CpRelativePath<CR>", { noremap = true })
+map("n", "<Leader>Pr", "<cmd>CpRelativePath<CR>", { noremap = true })
 
 -- 快捷键复制当前缓冲区的绝对路径
-map("n", "<Leader>pa", "<cmd>CpAbsolutePath<CR>", { noremap = true })
+map("n", "<Leader>Pa", "<cmd>CpAbsolutePath<CR>", { noremap = true })
 
 -- 复制当前缓冲区文件的基本名称
-map("n", "<Leader>pb", "<cmd>CpFileName<CR>", { noremap = true })
+map("n", "<Leader>Pb", "<cmd>CpFileName<CR>", { noremap = true })
