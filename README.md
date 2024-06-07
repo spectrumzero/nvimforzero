@@ -5,7 +5,7 @@
 
 🌙 Appearances:
 
-![](C:\myblog\source\img\config/0.png)
-![](C:\myblog\source\img\config/1.png)
-![](C:\myblog\source\img\config/2.png)
+![](./assets/img/0.png)
+![](./assets/img/1.png)
+![](./assets/img/2.png)
 
