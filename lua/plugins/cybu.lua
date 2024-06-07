@@ -1,4 +1,4 @@
--- 类似vscode浮动导航页
+-- 类似vscode浮动导航页，跳转到上一个或下一个使用的buffer
 return {
   "ghillb/cybu.nvim",
   branch = "main", -- timely updates

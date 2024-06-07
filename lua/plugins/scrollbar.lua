@@ -5,5 +5,6 @@ return {
     config = function()
       require("scrollbar").setup({})
     end,
+    enabled = false,
   },
 }
