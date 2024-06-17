@@ -23,7 +23,14 @@ opt.spell = false
 opt.mouse = "a"
 
 --字体
-opt.guifont = { "Hack Nerd Font Mono", "FiraCode Nerd Font Propo", "华文新魏", ":h12" }
+opt.guifont = {
+  "CaskaydiaCove Nerd Font Mono",
+  "EnvyCodeR Nerd Font",
+  "GohuFont 11 Nerd Font",
+  "Hack Nerd Font Mono",
+  "华文新魏",
+  ":h12",
+}
 
 --设置光标的轮廓样式
 opt.guicursor =
@@ -31,7 +38,7 @@ opt.guicursor =
 
 -------------neovide设置
 --透明度
-vim.g.neovide_transparency = 0.6
+vim.g.neovide_transparency = 1
 
 -- hide the mouse when typing
 vim.g.neovide_hide_mouse_when_typing = true

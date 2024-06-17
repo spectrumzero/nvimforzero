@@ -9,7 +9,7 @@ return {
           copy = "#ee3a57",
           delete = "#424246",
           insert = "#bdc7e7",
-          visual = "#0de0ee",
+          visual = "#69f6ff",
         },
       })
     end,
