@@ -14,3 +14,19 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = false -- 覆盖默认的 true
   end,
 })
+
+-- 为终端缓冲区设置不显示行号
+-- 首先创建一个自动命令组来避免命令重复定义的警告
+vim.api.nvim_create_augroup("TermNoLineNumbers", { clear = true })
+-- 当"TermOpen"事件触发时，这一自动命令会运行
+vim.api.nvim_create_autocmd("TermOpen", {
+  --所属上面自定义的组
+  group = "TermNoLineNumbers",
+  -- 适用于所有打开的终端缓冲区
+  pattern = "*",
+  -- 当自动命令触发时，callback函数会自动执行
+  callback = function()
+    vim.opt_local.number = false -- 禁用普通行号
+    vim.opt_local.relativenumber = false -- 禁用相对行号
+  end,
+})
