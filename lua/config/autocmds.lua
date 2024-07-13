@@ -10,8 +10,10 @@ vim.api.nvim_create_autocmd("FileType", {
   group = augroup("wrap_spell"),
   pattern = { "gitcommit", "markdown" },
   callback = function()
+    --设置自动换行
     vim.opt_local.wrap = true
-    vim.opt_local.spell = false -- 覆盖默认的 true
+    -- 禁用拼写检查
+    vim.opt_local.spell = false
   end,
 })
 

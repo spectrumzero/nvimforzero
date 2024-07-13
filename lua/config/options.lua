@@ -25,9 +25,9 @@ opt.mouse = "a"
 --字体
 opt.guifont = {
   "CaskaydiaCove Nerd Font Mono",
-  "EnvyCodeR Nerd Font",
-  "GohuFont 11 Nerd Font",
+  -- "EnvyCodeR Nerd Font",
   "Hack Nerd Font Mono",
+  -- "GohuFont 11 Nerd Font",
   "华文新魏",
   ":h12",
 }
