@@ -17,8 +17,11 @@ unmap("n", "t")
 -- 定义按键映射，当按下 <Leader>j 时执行跳转
 map("n", "<Leader>j", '<cmd>lua require("flash").jump()<CR>', { noremap = true, silent = true })
 
---toggleterm映射
-map({ "i", "n" }, "<c-/>", "<cmd>ToggleTerm<cr>", { noremap = true })
+-- 打开yank的历史，但需要先执行:lua require("telescope").load_extension("yank_history")
+map("n", "<Leader>p", "<cmd>Telescope yank_history<CR>", { noremap = true, silent = true })
+
+--toggleterm映射, 这里还是有一点问题，先用默认的吧
+-- map({ "i", "n" }, "<c-/>", "<cmd>ToggleTerm<cr>", { noremap = true })
 
 -- 快捷键复制当前缓冲区的相对路径
 map("n", "<Leader>Pr", "<cmd>CpRelativePath<CR>", { noremap = true })

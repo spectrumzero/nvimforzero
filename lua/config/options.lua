@@ -5,12 +5,12 @@ local opt = vim.opt
 opt.relativenumber = false
 
 --设置shell，保证终端正确解析命令
-opt.shell = "pwsh"
-opt.shellcmdflag = "-command"
-opt.shellquote = '"'
-opt.shellxquote = ""
-opt.modelines = 0
-opt.showcmd = true
+vim.opt.shell = "fish"
+vim.opt.shellcmdflag = "-c"
+vim.opt.shellquote = "\""
+vim.opt.shellxquote = "\""
+vim.opt.modelines = 0
+vim.opt.showcmd = true
 
 --设置conceal的级别
 opt.conceallevel = 0
@@ -26,15 +26,15 @@ opt.mouse = "a"
 opt.guifont = {
   "CaskaydiaCove Nerd Font Mono",
   -- "EnvyCodeR Nerd Font",
-  "Hack Nerd Font Mono",
   -- "GohuFont 11 Nerd Font",
   "华文新魏",
-  ":h12",
+  "微软雅黑",
+  ":h14",
 }
 
 --设置光标的轮廓样式
 opt.guicursor =
-  "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
+"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
 
 -------------neovide设置
 --透明度
