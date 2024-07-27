@@ -7,8 +7,8 @@ opt.relativenumber = false
 --设置shell，保证终端正确解析命令
 vim.opt.shell = "fish"
 vim.opt.shellcmdflag = "-c"
-vim.opt.shellquote = "\""
-vim.opt.shellxquote = "\""
+vim.opt.shellquote = '"'
+vim.opt.shellxquote = '"'
 vim.opt.modelines = 0
 vim.opt.showcmd = true
 
@@ -29,12 +29,12 @@ opt.guifont = {
   -- "GohuFont 11 Nerd Font",
   "华文新魏",
   "微软雅黑",
-  ":h14",
+  ":h12",
 }
 
 --设置光标的轮廓样式
 opt.guicursor =
-"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
+  "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
 
 -------------neovide设置
 --透明度
@@ -51,7 +51,7 @@ vim.g.neovide_cursor_vfx_particle_speed = 60.0
 vim.g.neovide_cursor_vfx_particle_phase = 1.0
 
 --打开neovide默认全屏
-vim.g.neovide_fullscreen = true
+vim.g.neovide_fullscreen = false
 
 --启用分析器
 vim.g.neovide_profiler = false
