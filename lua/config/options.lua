@@ -33,7 +33,7 @@ opt.guifont = {
   -- "GohuFont 11 Nerd Font",
   "华文新魏",
   "微软雅黑",
-  ":h12",
+  ":h10",
 }
 
 --设置光标的轮廓样式
