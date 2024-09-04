@@ -32,3 +32,11 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.opt_local.relativenumber = false -- 禁用相对行号
   end,
 })
+
+-- Disable auto-formatting for HTML files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "html",
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
