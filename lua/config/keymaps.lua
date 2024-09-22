@@ -32,5 +32,5 @@ map("n", "<Leader>Pa", "<cmd>CpAbsolutePath<CR>", { noremap = true })
 -- 复制当前缓冲区文件的基本名称
 map("n", "<Leader>Pb", "<cmd>CpFileName<CR>", { noremap = true })
 
--- 取消保存的同时并予以格式化的连带操作
--- map("n", "<C-s>", "<cmd>w<cr>", { noremap = true })
+-- fzf in the current directory (non-recursive).
+map({ "n", "i" }, "<c-t>", "<cmd>FzfLua files<cr>", { noremap = true })
