@@ -47,11 +47,15 @@ vim.g.neovide_transparency = 1
 vim.g.neovide_hide_mouse_when_typing = true
 
 --动画效果
-vim.g.neovide_cursor_animation_length = 0.06
+vim.g.neovide_cursor_animation_length = 0.02
 vim.g.neovide_cursor_vfx_mode = "torpedo"
 vim.g.neovide_cursor_vfx_particle_speed = 60.0
+vim.g.neovide_cursor_vfx_opacity = 300
+vim.g.neovide_cursor_vfx_particle_lifetime = 1
+vim.g.neovide_cursor_vfx_particle_density = 5.0
 -- 仅仅railgun适用
-vim.g.neovide_cursor_vfx_particle_phase = 1.0
+vim.g.neovide_cursor_vfx_particle_phase = 200
+vim.g.neovide_cursor_vfx_particle_curl = 10
 
 --打开neovide默认全屏
 vim.g.neovide_fullscreen = false
