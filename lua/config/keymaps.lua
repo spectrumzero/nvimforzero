@@ -34,3 +34,6 @@ map("n", "<Leader>Pb", "<cmd>CpFileName<CR>", { noremap = true })
 
 -- fzf in the current directory (non-recursive).
 map({ "n", "i" }, "<c-t>", "<cmd>FzfLua files<cr>", { noremap = true })
+
+-- view Todo marks
+map({ "n", "i" }, "<Leader>sn", "<cmd>TodoTelescope<cr>", { noremap = true })
