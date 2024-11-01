@@ -1,19 +1,23 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  -- bootstrap lazy.nvim
-  -- stylua: ignore
-  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
-vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import any extras modules here
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -26,8 +30,11 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  -- install = { colorscheme = { "habamax", "tokyonight" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  install = { colorscheme = { "tokyonight", "habamax" } },
+  checker = {
+    enabled = true, -- check for plugin updates periodically
+    notify = false, -- notify on update
+  }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
@@ -45,7 +52,6 @@ require("lazy").setup({
   },
 })
 
--- 终端设置
 require("toggleterm").setup({
   open_mapping = [[<c-\>]],
   hide_numbers = false,
@@ -54,68 +60,3 @@ require("toggleterm").setup({
   insert_mappings = true,
   direction = "float",
 })
-
---主题设置
-require("tokyonight").setup({
-  -- use the night style
-  style = "moon",
-  -- disable italic for functions
-  styles = {
-    functions = {},
-  },
-  sidebars = { "qf", "vista_kind", "terminal", "packer" },
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  on_colors = function(colors)
-    colors.hint = colors.orange
-    colors.error = "#ff0000"
-  end,
-})
-
---lualine
-require("lualine").setup({
-  options = {
-    theme = "auto",
-  },
-})
-
---其它主题
--- require("nordic").setup({
---   -- Enable bold keywords.
---   bold_keywords = true,
---   -- Enable italic comments.
---   italic_comments = true,
---   -- Enable brighter float border.
---   -- Swap the dark background with the normal one.
---   swap_backgrounds = false,
---   -- Override the styling of any highlight group.
---   override = {},
---   -- Cursorline options.  Also includes visual/selection.
---   cursorline = {
---     -- Bold font in cursorline.
---     bold = false,
---     -- Bold cursorline number.
---     bold_number = true,
---     -- Available styles: 'dark', 'light'.
---     style = "light",
---     -- Blending the cursorline bg with the buffer bg.
---     blend = 0.85,
---   },
---   noice = {
---     -- Available styles: `classic`, `flat`.
---     style = "classic",
---   },
---   telescope = {
---     -- Available styles: `classic`, `flat`.
---     style = "flat",
---   },
---   leap = {
---     -- Dims the backdrop when using leap.
---     dim_backdrop = false,
---   },
---   ts_context = {
---     -- Enables dark background for treesitter-context window
---     dark_background = true,
---   },
--- })
--- require("nordic").load()
---
