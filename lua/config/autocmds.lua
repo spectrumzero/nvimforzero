@@ -37,6 +37,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "html",
   callback = function()
-    vim.b.autoformat = false
+    vim.b.autoformat = true
   end,
 })
