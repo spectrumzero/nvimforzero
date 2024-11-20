@@ -5,10 +5,8 @@ return {
     -- Event to trigger linters
     events = { "BufWritePost", "BufReadPost", "InsertLeave" },
     linters_by_ft = {
-      fish = { "fish" },
       html = { "htmlhint" },
-      cpp = {},
-      javascript = {},
+      cpp = { "cpplint" },
     },
     -- LazyVim extension to easily override linter options
     -- or add custom linters.
