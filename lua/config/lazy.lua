@@ -51,12 +51,3 @@ require("lazy").setup({
     },
   },
 })
-
-require("toggleterm").setup({
-  open_mapping = [[<c-\>]],
-  hide_numbers = false,
-  shade_filetypes = {},
-  shade_terminals = true,
-  insert_mappings = true,
-  direction = "float",
-})
