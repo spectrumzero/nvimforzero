@@ -6,7 +6,7 @@ return {
     events = { "BufWritePost", "BufReadPost", "InsertLeave" },
     linters_by_ft = {
       html = { "htmlhint" },
-      cpp = { "cpplint" },
+      -- cpp = { "cpplint" },
     },
     -- LazyVim extension to easily override linter options
     -- or add custom linters.
