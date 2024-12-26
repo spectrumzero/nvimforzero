@@ -1,4 +1,4 @@
--- Options are automatically loaded before lazy.nvim startup
+--Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
@@ -7,11 +7,8 @@ local opt = vim.opt
 opt.relativenumber = false
 
 --设置shell，保证终端正确解析命令
-vim.opt.shell = "fish"
-vim.opt.shellcmdflag = "-c"
+vim.opt.shell = "pwsh"
 vim.opt.shellquote = '"'
--- fish shell不需要这一行，所以应当注释掉，避免toggleterm出错
--- vim.opt.shellxquote = '"'
 vim.opt.modelines = 0
 vim.opt.showcmd = true
 
@@ -21,19 +18,13 @@ opt.conceallevel = 0
 --禁用拼写检查
 opt.spell = false
 
---启用鼠标
---似乎需要:so一次(options.lua)
-opt.mouse = "a"
-
 ------ gui配置
 --字体
 opt.guifont = {
-  "CaskaydiaCove Nerd Font Mono",
-  -- "EnvyCodeR Nerd Font",
-  -- "GohuFont 11 Nerd Font",
-  -- "华文新魏",
+  "Cascadia Mono",
+  -- "EnvyCodeR Ned Font",
   "微软雅黑",
-  ":h10",
+  ":h12",
 }
 
 --设置光标的轮廓样式

@@ -10,14 +10,14 @@ return {
       --               "1" for Fcitx
       --               "xkb:us::eng" for ibus
       -- You can use `im-select` or `fcitx5-remote -n` to get the IM's name
-      default_im_select = "keyboard-us",
+      default_im_select = "1033",
       -- Can be binary's name, binary's full path, or a table, e.g. 'im-select',
       -- '/usr/local/bin/im-select' for binary without extra arguments,
       -- or { "AIMSwitcher.exe", "--imm" } for binary need extra arguments to work.
       -- For Windows/WSL, default: "im-select.exe"
       -- For macOS, default: "im-select"
       -- For Linux, default: "fcitx5-remote" or "fcitx-remote" or "ibus"
-      default_command = "fcitx5-remote",
+      default_command = "E:/programs/imselect/im-select.exe",
 
       -- Restore the default input method state when the following events are triggered
       set_default_events = { "VimEnter", "FocusGained", "InsertLeave", "CmdlineLeave" },

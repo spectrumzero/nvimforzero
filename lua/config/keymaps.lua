@@ -6,11 +6,6 @@
 local map = vim.keymap.set
 local unmap = vim.keymap.del
 
--- 恢复原状
-map("n", "s", "xi", { noremap = true })
-map("n", "/", "/", { noremap = true })
-unmap("n", "t")
-
 -- 退出终端。像<cmd>...<cr>这样的写法，表示的是直接进入命令行模式执行相关命令
 -- map("t", "<F5>", "<Cmd>q<CR>")
 
@@ -21,7 +16,7 @@ map("n", "<Leader>j", '<cmd>lua require("flash").jump()<CR>', { noremap = true, 
 map("n", "<Leader>p", "<cmd>Telescope yank_history<CR>", { noremap = true, silent = true })
 
 --toggleterm映射
-map({ "i", "n" }, "<c-/>", "<cmd>ToggleTerm<cr>", { noremap = true })
+-- map({ "i", "n" }, "<c-\\>", "<cmd>ToggleTerm<cr>", { noremap = true })
 
 -- 快捷键复制当前缓冲区的相对路径
 map("n", "<Leader>Pr", "<cmd>CpRelativePath<CR>", { noremap = true })
