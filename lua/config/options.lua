@@ -41,7 +41,7 @@ opt.guicursor =
   "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
 
 --透明度
-vim.g.neovide_transparency = 1
+vim.g.neovide_opacity = 1
 
 -- hide the mouse when typing
 vim.g.neovide_hide_mouse_when_typing = true
@@ -51,11 +51,7 @@ vim.g.neovide_cursor_animation_length = 0.02
 vim.g.neovide_cursor_vfx_mode = "torpedo"
 vim.g.neovide_cursor_vfx_particle_speed = 60.0
 vim.g.neovide_cursor_vfx_opacity = 300
-vim.g.neovide_cursor_vfx_particle_lifetime = 1
-vim.g.neovide_cursor_vfx_particle_density = 5.0
--- 仅仅railgun适用
-vim.g.neovide_cursor_vfx_particle_phase = 200
-vim.g.neovide_cursor_vfx_particle_curl = 10
+vim.g.neovide_cursor_vfx_particle_lifetime = 0.5
 
 --打开neovide默认全屏
 vim.g.neovide_fullscreen = false
